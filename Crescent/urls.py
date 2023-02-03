@@ -41,6 +41,11 @@ urlpatterns = [
     path('delete_logo',views.delete_logo),
     path('set_logo',views.set_logo),
 
+    path('carrer',views.carrer),
+    path('update_carrer',views.update_carrer),
+
+
+
     
 
 ]

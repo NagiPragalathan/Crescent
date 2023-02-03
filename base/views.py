@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Gallery,Team,logo
+from .models import Gallery,Team,logo,Carrer
 from .Tools import get_images,get_team,reguler_datas
 
 # Create your views here.
@@ -91,7 +91,27 @@ def set_logo(request):
     obj.save()
     return render(request,"home/logo.html")
 #............................................................
+#...............Logo.........................................
 
+def carrer(request):
+    return render(request,"about_us/carrer.html")
+def update_carrer(request):
+    ids=['#name','#Qualification','#Experience','#Email','#Subject','#Message']
+    Name = request.POST.get(ids[0])
+    Email = request.POST.get(ids[3])
+    Message = request.POST.get(ids[-1])
+    Subject = request.POST.get(ids[4])
+    qualififcation = request.POST.get(ids[1])
+    experience = request.POST.get(ids[2])
+    image = request.FILES["#fileInput-single"]
+    obj = Carrer(Name=Name,Email=Email,Message=Message,Subject=Subject,qualififcation=qualififcation,experience=experience,image=image)
+    obj.save()
+    ob=Carrer.objects.all()
+    for i in ob:
+        print(i.Name)
+    return render(request,"about_us/carrer.html")
+    
+#............................................................
 #...............birac........................................
 def birac(request):
     return render(request,"about_us/birac.html",reguler_datas())

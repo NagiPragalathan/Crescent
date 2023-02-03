@@ -93,3 +93,14 @@ class Facilities_developed(models.Model):
     FD_id = models.IntegerField(primary_key=True)
     topic = models.CharField(max_length = 200)
     content = models.CharField(max_length = 200)
+
+class Carrer(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    updated_date    = models.DateField(default=timezone.now())
+    Name   = models.CharField(max_length = 200)
+    image           = models.ImageField(upload_to='Carrer/%Y/%m/%d',default='carrer/Screenshot_3.png')
+    Email            = models.CharField(max_length = 200)
+    Message     = models.CharField(max_length = 200,default='designation')
+    Subject      = models.CharField(max_length = 200,default='department')
+    qualififcation  = models.CharField(max_length = 200,default='qualififcation')
+    experience      = models.IntegerField(default=0)
