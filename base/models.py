@@ -104,3 +104,9 @@ class Carrer(models.Model):
     Subject      = models.CharField(max_length = 200,default='department')
     qualififcation  = models.CharField(max_length = 200,default='qualififcation')
     experience      = models.IntegerField(default=0)
+
+class blog(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    title           = models.CharField(max_length = 200,default='UnTitled')
+    description     = models.CharField(max_length = 200,default = "Author not provied any description")
+    content         = models.CharField(max_length = 2000,default = "Author not provied any description")

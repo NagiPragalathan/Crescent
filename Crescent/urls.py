@@ -43,6 +43,10 @@ urlpatterns = [
 
     path('carrer',views.carrer),
     path('update_carrer',views.update_carrer),
+    path('blog_edit',views.blog_edit),
+    path('save_blog',views.save_blog),
+
+
 
 
 

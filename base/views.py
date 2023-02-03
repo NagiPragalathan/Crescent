@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Gallery,Team,logo,Carrer
+from .models import Gallery,Team,logo,Carrer,blog
 from .Tools import get_images,get_team,reguler_datas
 
 # Create your views here.
@@ -112,6 +112,22 @@ def update_carrer(request):
     return render(request,"about_us/carrer.html")
     
 #............................................................
+
+#...............Blog........................................
+def blog_edit(request):
+    return render(request,"pages/blog_edit.html")
+
+def save_blog(request):
+    ids = ['#title','#description','#content']
+    title = request.POST.get(ids[0])
+    description = request.POST.get(ids[1])
+    content = request.POST.get(ids[2])
+    obj = blog(title=title,description=description,content=content)
+    obj.save()
+
+    return render(request,"pages/blog_edit.html")
+#............................................................
+
 #...............birac........................................
 def birac(request):
     return render(request,"about_us/birac.html",reguler_datas())
