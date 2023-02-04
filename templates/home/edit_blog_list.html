@@ -111,7 +111,17 @@
                                     <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                                         view
                                     </span>
-                                </button>
+                                  </button>
+                                  <button onclick="edit_blog({{ j.id }})" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Edit
+                                    </span>
+                                  </button>
+                                  <button onclick="del({{ j.id }})" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+                                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                                        Delete
+                                    </span>
+                                  </button>
                             </p>
                         </div>
                         </div>
@@ -121,9 +131,27 @@
         {% endfor %}
     </div>
     <script>
+        function del(id) {
+            $.ajax({
+                method: "get",
+                url: 'delete_blog',
+                data: {
+                    'id': id,
+                    'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+                }, success: function (data) {
+                    location.reload();
+                }
+            });
+        }
         function get_blog(id){
-            location.href = "view_blog/" + id;
+            window.location.replace("view_blog/" + id)
+        }
+        function edit_blog(id){
+            window.location.replace("edit_blog/" + id)
         }
     </script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
 </body>
 </html>

@@ -43,14 +43,25 @@ urlpatterns = [
 
     path('carrer',views.carrer),
     path('update_carrer',views.update_carrer),
+    
+    path('list_blog',views.list_blog),
+    path('list_edit_blog',views.list_edit_blog),
+    path('view_blog/<str:pk>',views.view_blog),
+    path('edit_blog/<str:pk>',views.edit_blog),
     path('blog_edit',views.blog_edit),
     path('save_blog',views.save_blog),
+    path('delete_blog',views.delete_blog),
+    path('edit_blog/save_edit_blog/<int:pk>',views.save_edit_blog),
+
+    path('testimonicals',views.Testimonicals),
+    path('testimonicals_edit',views.Testimonicals_edit),
+    path('testimonicals_save',views.Testimonicals_save),
+
+    path('events',views.events),
+    path('events_save',views.events_save),
+    path('events_edit',views.events_edit),
 
 
-
-
-
-    
 
 ]
 if settings.DEBUG:

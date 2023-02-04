@@ -22,7 +22,7 @@
         <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body onload="load()">
         <div class="container-scroller">
             <!-- partial:partials/_navbar.html -->
             <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
@@ -336,22 +336,22 @@
                                             {% csrf_token %}
                                         <div class="mb-4">
                                             <label class="text-xl text-gray-600">Title <span class="text-red-500">*</span></label></br>
-                                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="title" id="title" value="" required>
+                                            <input type="text" value="{{ obj.title }}" class="border-2 border-gray-300 p-2 w-full" name="title" id="title" value="" required>
                                         </div>
 
                                         <div class="mb-4">
                                             <label class="text-xl text-gray-600">Description</label></br>
-                                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="description" id="description" placeholder="(Optional)">
+                                            <input type="text" value="{{ obj.description }}" class="border-2 border-gray-300 p-2 w-full" name="description" id="description" placeholder="(Optional)">
                                         </div>
 
                                         <div class="mb-4">
                                             <label class="text-xl text-gray-600">Thumbnail image</label></br>
-                                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="Thumbnail" id="Thumbnail" placeholder="(Optional)">
+                                            <input type="text" value="{{ obj.blog_profile_img }}" class="border-2 border-gray-300 p-2 w-full" name="Thumbnail" id="Thumbnail" placeholder="(Optional)">
                                         </div>
 
                                         <div class="mb-4">
                                             <label class="text-xl text-gray-600">Category</label></br>
-                                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="Category" id="Category" placeholder="(Optional)">
+                                            <input type="text" value="{{ obj.categories }}" class="border-2 border-gray-300 p-2 w-full" name="Category" id="Category" placeholder="(Optional)">
                                         </div>
 
                                         <div class="mb-8">
@@ -366,7 +366,7 @@
                                                 <option>Save and Publish</option>
                                                 <option>Save Draft</option>
                                             </select>
-                                            <button onclick="img_upload('save_blog','#content',['#title','#description','#Category','#Thumbnail'])" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
+                                            <button onclick="img_upload('save_edit_blog/{{ obj.id }}','#content',['#title','#description','#Category','#Thumbnail'],{{ obj.id }})" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
                                         </div>
                                     </form>
                                 </div>
@@ -388,7 +388,10 @@
         </div>
         <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script>
         <script>
-
+            function load(){
+              let val = "{{ obj.content|escapejs }}";
+              CKEDITOR.instances['editor2'].setData(val);
+            }
               var changesCount = 0;
               var editor2 = CKEDITOR.replace('editor2', {
                 removePlugins: 'sourcearea',
@@ -401,13 +404,15 @@
                 document.getElementById('changes').innerHTML = changesCount.toString();
                 document.getElementById('editorcontent2').innerHTML = editor2.getData();
               });
-            
-            function img_upload(url,con,datas) {
+            function img_upload(url,con,datas,num) {
                 
                 console.log(datas,url)
                 var data = new FormData();
                 data.append(con,editor2.getData())
                 data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
+                data.append("id","num")
+
+                console.log(num)
                 for(let i=0;i<datas.length;i++){
                   data.append(datas[i],$(datas[i]).val())
                 }

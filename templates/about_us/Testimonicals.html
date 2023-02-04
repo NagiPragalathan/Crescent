@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="An impressive and flawless site template that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional website." />
+    <meta name="keywords"
+        content="bootstrap 5, business, corporate, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sass, seo, startup, html5 template, site template" />
+    <meta name="author" content="elemis" />
+    <title>Testimonicals</title>
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+</head>
+
+<body>
+    <section class="wrapper bg-light">
+        <div class="container py-14 py-md-16">
+            <div class="row">
+                <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 mx-auto text-center">
+                    <h2 class="fs-15 text-uppercase text-muted mb-3">Testimonicals</h2>
+                    <h3 class="display-4 mb-10 px-xl-10 px-xxl-15">
+                        "Real Experiences, Real Impact: Student Voices on Our Campus"
+                    </h3>
+                </div>
+                <!-- /column -->
+            </div>
+            <!-- /.row -->
+            <div class="grid">
+                <div class="row isotope gy-6">
+                    {% for i in card %}
+
+                    <div class="item col-md-6 col-xl-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <span class="ratings five mb-3"></span>
+
+                                <blockquote class="icon mb-0">
+                                    <p>
+                                        {{ i.description }}
+                                    </p>
+                                    <div class="blockquote-details">
+                                        <img class="rounded-circle w-12" src="{{ i.image.url }}"
+                                            srcset="./{% static 'assets/img/avatars/te1@2x.jpg 2x" alt="" />
+                                        <div class="info">
+                                            <h5 class="mb-1">{{ i.Name }}</h5>
+                                            <p class="mb-0">{{ i.position }}</p>
+                                        </div>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    {% endfor %}
+                
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.grid-view -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /section -->
+
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="{% static 'assets/js/plugins.js' %}"></script>
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+</body>
+
+</html>
