@@ -114,3 +114,38 @@ class blog(models.Model):
     categories = models.CharField(max_length = 200)
     updated_date    = models.DateField(default=timezone.now())
 
+class Birac(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    title           = models.CharField(max_length = 200,default='UnTitled')
+    subtitle           = models.CharField(max_length = 200)
+    description     = models.CharField(max_length = 200,default = "Author not provied any content")
+    overview     = models.CharField(max_length = 200,default = "Author not provied any content")
+    updated_date    = models.DateField(default=timezone.now())
+    
+class Tbi(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    title           = models.CharField(max_length = 200,default='UnTitled')
+    subtitle           = models.CharField(max_length = 200)
+    description     = models.CharField(max_length = 200,default = "Author not provied any content")
+    overview     = models.CharField(max_length = 200,default = "Author not provied any content")
+    updated_date    = models.DateField(default=timezone.now())
+    
+class Sisfs(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    title           = models.CharField(max_length = 200,default='UnTitled')
+    subtitle           = models.CharField(max_length = 200)
+    description     = models.CharField(max_length = 200,default = "Author not provied any content")
+    overview     = models.CharField(max_length = 200,default = "Author not provied any content")
+    updated_date    = models.DateField(default=timezone.now())
+    
+class EventsForm(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    updated_date    = models.DateField(default=timezone.now())
+    title = models.CharField(max_length = 200,default='title')
+    Name   = models.CharField(max_length = 200)
+    image           = models.ImageField(upload_to='EventsForm/%Y/%m/%d',default='carrer/Screenshot_3.png')
+    Email            = models.CharField(max_length = 200)
+    company     = models.CharField(max_length = 200,default='company')
+    event      = models.CharField(max_length = 200,default='event')
+    linkedin  = models.CharField(max_length = 200,default='linkedin')
+    website      = models.CharField(max_length = 200,default='website')
