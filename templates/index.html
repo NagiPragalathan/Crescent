@@ -1,5 +1,6 @@
 <html lang="en">
   <head>
+    {% load static %}
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,13 +33,12 @@
     <script src="https://unpkg.com/@yaireo/tagify/dist/tagify.polyfills.min.js"></script>
     <script>
       // The DOM element you wish to replace with Tagify
-      var input = document.querySelector('input[name=tags]');
+      var input = document.querySelector("input[name=tags]");
       // initialize Tagify on the above input node reference
       new Tagify(input);
-      input.addEventListener('change', function () {  
-        console.log(input.value)
-       });  
-
+      input.addEventListener("change", function () {
+        console.log(input.value);
+      });
     </script>
   </body>
 </html>
