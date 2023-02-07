@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from .models import Gallery,Team,logo,Carrer,blog,Testimonials,Events
+from .models import Gallery,Team,logo,Carrer,blog,Testimonials,Events,Birac,Tbi,Sisfs,EventsForm
 from .Tools import get_images,get_team,reguler_datas,get_blog
 import datetime
+import json
+import openpyxl
+
 # Create your views here.
 
 def home(request):
@@ -237,6 +240,256 @@ def Testimonicals_save(request):
 
 #...............birac........................................
 def birac(request):
-    return render(request,"about_us/birac.html",reguler_datas())
+    obj = Birac.objects.latest('id')
+    re_view = obj.overview.split(',')
+    topic= {}
+    for i in re_view:
+        if '~' in i:
+           topic[i.split('~')[1]] = i.split('~')[0]
+            
+    print(topic)
 
+    return render(request,"about_us/birac.html",reguler_datas({'birac':obj,"topic":topic}))
 
+def birac_edit(request):
+    obj = Birac.objects.all()
+    item = []
+    topic= {}
+    birac_ = {}
+    for i in obj:
+        topic=dict()
+        for j in i.overview.split(','):
+             if '~' in j:
+                topic[j.split('~')[1]] = j.split('~')[0]
+        item.append(topic)
+    print(item)
+    for i,x in enumerate(obj):
+        birac_[x] = item[i]
+    print(birac_)
+    return render(request,"pages/birac_edit.html",reguler_datas({'birac':birac_,'view':item}))
+
+def birac_save(request):
+    ids = ['#title','#subtitle','#content','tags']
+    title =request.POST.get(ids[0])
+    subtitle_ = request.POST.get(ids[1])
+    content = request.POST.get(ids[2])
+    tags = request.POST.get(ids[3])
+    item=""
+    print(subtitle_)
+    res = json.loads(tags)
+    for i in res:
+        item = item + i.get('value') + ", "
+    obj = Birac(title=title,subtitle=subtitle_,description=content,overview=item)
+    obj.save()
+    print("/..........................................saved................................................../")
+    return render(request,"pages/birac_edit.html",reguler_datas())
+
+def delete_birac(request):
+    bl_id = request.GET.get("id")
+    page = Birac.objects.get(id=bl_id)
+    page.delete()
+    return render(request,"home/view_blog.html",{'blog':page})
+
+def set_birac(request):
+    id_ = request.GET.get("id")
+    image = Birac.objects.get(id=id_)
+    title = image.title
+    subtitle = image.subtitle
+    description = image.description
+    overview = image.overview
+    image.delete()
+    obj = Birac(title=title,subtitle=subtitle,description=description,overview=overview)
+    obj.save()
+    print("saved")
+    return render(request,"home/logo.html")
+
+#............................................................
+
+#...............tbi........................................
+def tbi(request):
+    try:
+        obj = Tbi.objects.latest('id')
+        re_view = obj.overview.split(',')
+        topic= {}
+        for i in re_view:
+            if '~' in i:
+                topic[i.split('~')[1]] = i.split('~')[0]
+    except:
+        obj = ""
+        topic = ""
+        print("maybe the database are empty.....")
+            
+    print(topic)
+
+    return render(request,"about_us/tbi.html",reguler_datas({'birac':obj,"topic":topic}))
+
+def tbi_edit(request):
+    obj = Tbi.objects.all()
+    item = []
+    topic= {}
+    tbi_ = {}
+    for i in obj:
+        topic=dict()
+        for j in i.overview.split(','):
+             if '~' in j:
+                topic[j.split('~')[1]] = j.split('~')[0]
+        item.append(topic)
+    print(item)
+    for i,x in enumerate(obj):
+        tbi_[x] = item[i]
+    print(tbi_)
+    return render(request,"pages/tbi_edit.html",reguler_datas({'birac':tbi_,'view':item}))
+
+def tbi_save(request):
+    ids = ['#title','#subtitle','#content','tags']
+    title =request.POST.get(ids[0])
+    subtitle_ = request.POST.get(ids[1])
+    content = request.POST.get(ids[2])
+    tags = request.POST.get(ids[3])
+    item=""
+    print(subtitle_)
+    res = json.loads(tags)
+    for i in res:
+        item = item + i.get('value') + ", "
+    obj = Tbi(title=title,subtitle=subtitle_,description=content,overview=item)
+    obj.save()
+    print("/..........................................saved................................................../")
+    return render(request,"pages/tbi_edit.html",reguler_datas())
+
+def delete_tbi(request):
+    bl_id = request.GET.get("id")
+    page = Tbi.objects.get(id=bl_id)
+    page.delete()
+    return render(request,"home/view_blog.html",{'blog':page})
+
+def set_tbi(request):
+    id_ = request.GET.get("id")
+    image = Tbi.objects.get(id=id_)
+    title = image.title
+    subtitle = image.subtitle
+    description = image.description
+    overview = image.overview
+    image.delete()
+    obj = Tbi(title=title,subtitle=subtitle,description=description,overview=overview)
+    obj.save()
+    print("saved")
+    return render(request,"home/logo.html")
+
+#............................................................
+
+#...............sisfs........................................
+def sisfs(request):
+    try:
+        obj = Sisfs.objects.latest('id')
+        re_view = obj.overview.split(',')
+        topic= {}
+        for i in re_view:
+            if '~' in i:
+                topic[i.split('~')[1]] = i.split('~')[0]
+    except:
+        obj = ""
+        topic = ""
+        print("maybe the database are empty.....")
+            
+    print(topic)
+
+    return render(request,"about_us/sisfs.html",reguler_datas({'birac':obj,"topic":topic}))
+
+def sisfs_edit(request):
+    obj = Sisfs.objects.all()
+    item = []
+    topic= {}
+    sisfs_ = {}
+    for i in obj:
+        topic=dict()
+        for j in i.overview.split(','):
+             if '~' in j:
+                topic[j.split('~')[1]] = j.split('~')[0]
+        item.append(topic)
+    print(item)
+    for i,x in enumerate(obj):
+        sisfs_[x] = item[i]
+    print(sisfs_)
+    return render(request,"pages/sisfs_edit.html",reguler_datas({'birac':sisfs_,'view':item}))
+
+def sisfs_save(request):
+    ids = ['#title','#subtitle','#content','tags']
+    title =request.POST.get(ids[0])
+    subtitle_ = request.POST.get(ids[1])
+    content = request.POST.get(ids[2])
+    tags = request.POST.get(ids[3])
+    item=""
+    print(subtitle_)
+    res = json.loads(tags)
+    for i in res:
+        item = item + i.get('value') + ", "
+    obj = Sisfs(title=title,subtitle=subtitle_,description=content,overview=item)
+    obj.save()
+    print("/..........................................saved................................................../")
+    return render(request,"pages/sisfs_edit.html",reguler_datas())
+
+def delete_sisfs(request):
+    bl_id = request.GET.get("id")
+    page = Sisfs.objects.get(id=bl_id)
+    page.delete()
+    return render(request,"home/view_blog.html",{'blog':page})
+
+def set_sisfs(request):
+    id_ = request.GET.get("id")
+    image = Sisfs.objects.get(id=id_)
+    title = image.title
+    subtitle = image.subtitle
+    description = image.description
+    overview = image.overview
+    image.delete()
+    obj = Sisfs(title=title,subtitle=subtitle,description=description,overview=overview)
+    obj.save()
+    print("saved")
+    return render(request,"home/logo.html")
+
+def eventform(request):
+    return render(request,"about_us/event_form.html")
+
+def edit_eventform(request):
+    obj = EventsForm.objects.all()
+    return render(request,"pages/eventform_edit.html",{'obj':obj})
+
+def update_eventform(request):
+    title = request.POST.get('#title')
+    Name = request.POST.get('#name')
+    Email = request.POST.get('#Email')
+    company = request.POST.get('#company')
+    event = request.POST.get('#event')
+    linkedin = request.POST.get('#linkedin')
+    website  =request.POST.get('#website')
+    image = request.FILES["#fileInput-single"]
+    obj = EventsForm(title=title,Name=Name,Email=Email,linkedin=linkedin,website=website,company=company,event=event,image=image)
+    obj.save()
+    ob=EventsForm.objects.all()
+    for i in ob:
+        print(i.Name)
+    return render(request,"about_us/carrer.html")
+
+def delete_form(request):
+    bl_id = request.GET.get("id")
+    page = EventsForm.objects.get(id=bl_id)
+    page.delete()
+    return render(request,"home/view_blog.html",{'blog':page})
+
+def convert_excel(request):
+    wb = openpyxl.Workbook() 
+    sheet = wb.active 
+    data = EventsForm.objects.all()
+    title = ["updated_date","title","Name","Email","company","event","linkedin","website"]
+    for i,x in enumerate(title):
+        cell_obj = sheet.cell(row = 1, column = i+1)
+        cell_obj.value = x
+
+    for i,x in enumerate(data,2):
+        row_data = [x.updated_date,x.title,x.Name,x.Email,x.company,x.event,x.linkedin,x.website]
+        for j,y in enumerate(row_data):
+            cell_obj = sheet.cell(row = i+1, column = j+1)
+            cell_obj.value = y
+            print(i,j)
+    wb.save("sample5.xlsx") 
+    return render(request,"home/view_blog.html")

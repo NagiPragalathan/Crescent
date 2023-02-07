@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
     path('', views.home),
     path('admin',views.admin),
@@ -35,6 +36,12 @@ urlpatterns = [
     path('delete_team',views.delete_team),
 
     path('birac',views.birac),
+    path('birac_edit',views.birac_edit),
+    path('birac_save',views.birac_save),
+    path('delete_birac',views.delete_birac),
+    path('set_birac',views.set_birac),
+
+
 
     path('logo',views.update_logo),
     path('upload_logo',views.upload_logo),
@@ -43,6 +50,14 @@ urlpatterns = [
 
     path('carrer',views.carrer),
     path('update_carrer',views.update_carrer),
+    path('edit_eventform',views.edit_eventform),
+
+
+    path('eventform',views.eventform),
+    path('update_eventform',views.update_eventform),
+    path('delete_form',views.delete_form),
+    path('convert_excel',views.convert_excel),
+    
     
     path('list_blog',views.list_blog),
     path('list_edit_blog',views.list_edit_blog),
@@ -61,7 +76,17 @@ urlpatterns = [
     path('events_save',views.events_save),
     path('events_edit',views.events_edit),
 
+    path('tbi',views.tbi),
+    path('tbi_edit',views.tbi_edit),
+    path('tbi_save',views.tbi_save),
+    path('delete_tbi',views.delete_tbi),
+    path('set_tbi',views.set_tbi),
 
+    path('sisfs',views.sisfs),
+    path('sisfs_edit',views.sisfs_edit),
+    path('sisfs_save',views.sisfs_save),
+    path('delete_sisfs',views.delete_sisfs),
+    path('set_sisfs',views.set_sisfs),
 
 ]
 if settings.DEBUG:

@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
-<html lang="en">
 {% load static %}
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href=" {% static 'assets/img/favicon.png' %} " />
+    <link rel="shortcut icon" href=" {% static 'icon-dummy.png' %} " />
     <link rel="stylesheet" href=" {% static 'assets/css/plugins.css' %} " />
     <link rel="stylesheet" href=" {% static 'assets/css/style.css' %} " />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,739 +12,389 @@
   </head>
   <body>
     <div class="content-wrapper">
-        <header class="wrapper bg-soft-primary">
-            <nav
-              class="navbar navbar-expand-lg center-nav transparent navbar-light"
+      <header class="wrapper bg-soft-primary">
+        <nav
+          class="navbar navbar-expand-lg center-nav transparent navbar-light"
+        >
+          <div class="container flex-lg-row flex-nowrap align-items-center">
+            <div class="navbar-brand w-100">
+              <a href="#">
+                <img
+                  src=" {% static 'icon-dummy.png' %} "
+                  srcse {% static 't="./ass' %} ets/img/logo@2x.png 2x" style="width:60px; margin-left: 50px
+                  ;"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div
+              class="navbar-collapse offcanvas offcanvas-nav offcanvas-start"
             >
-              <div class="container flex-lg-row flex-nowrap align-items-center">
-                <div class="navbar-brand w-100">
-                  <a href=" {{ logo.image.url }} ">
-                    <img
-                      src=" {{ logo.image.url }} "
-                      srcse {% static 't="./ass' %} ets/img/logo@2x.png 2x"
-                      alt=""
-                      style="    width: 103px;"
-                    />
-                  </a>
-                </div>
-                <div
-                  class="navbar-collapse offcanvas offcanvas-nav offcanvas-start"
-                >
-                  <div class="offcanvas-header d-lg-none">
-                    <h3 class="text-white fs-30 mb-0">ABC CELL</h3>
-                    <button
-                      type="button"
-                      class="btn-close btn-close-white"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown dropdown-mega">
+              <div class="offcanvas-header d-lg-none">
+                <h3 class="text-white fs-30 mb-0">TBI</h3>
+                <button
+                  type="button"
+                  class="btn-close btn-close-white"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body ms-lg-auto d-flex flex-column h-100">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown dropdown-mega">
+                    <a
+                      class="nav-link  "
+                      href=" {% static 'index.html' %} "
+                      
+                      >Home</a
+                    >
+      
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link  "
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      >About Us</a
+                    >
+                    <ul class="dropdown-menu">
+                      <li class="dropdown dropdown-submenu dropend">
                         <a
-                          class="nav-link  "
+                          class="dropdown-item  "
                           href="#"
                           data-bs-toggle="dropdown"
-                          >Home</a
+                          >Our Campus</a
                         >
-                        <!-- <ul
-                          class="dropdown-menu mega-menu mega-menu-dark mega-menu-img"
-                        >
-                          <li class="mega-menu-content mega-menu-scroll">
-                            <ul
-                              class="row row-cols-1 row-cols-lg-6 gx-0 gx-lg-4 gy-lg-2 list-unstyled"
-                            >
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo1.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi1.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi1@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo I</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo2.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi2.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi2@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo II</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo3.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi3.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi3@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo III</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo4.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi4.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi4@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo IV</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo5.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi5.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi5@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo V</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo6.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi6.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi6@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo VI</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo7.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi7.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi7@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo VII</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo8.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi8.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi8@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo VIII</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo9.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi9.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi9@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo IX</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo10.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi10.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi10@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo X</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo11.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi11.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi11@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XI</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo12.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi12.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi12@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XII</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo13.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi13.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi13@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XIII</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo14.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi14.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi14@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XIV</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo15.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi15.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi15@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XV</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo16.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi16.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi16@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XVI</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo17.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi17.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi17@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XVII</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo18.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi18.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi18@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XVIII</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo19.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi19.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi19@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XIX</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo20.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi20.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi20@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XX</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo21.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi21.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi21@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XXI</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo22.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi22.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi22@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XXII</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo23.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi23.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi23@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XXIII</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo24.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi24.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi24@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XXIV</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo25.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi25.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi25@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XXV</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo26.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi26.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi26@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XXVI</span>
-                                </a>
-                              </li>
-                              <li class="col">
-                                <a class="dropdown-item" href=" {% static 'demo27.html' %} ">
-                                  <figure class="rounded lift d-none d-lg-block">
-                                    <img
-                                      src=" {% static 'assets/img/demos/mi27.jpg' %} "
-                                      srcse {% static 't="./ass' %} ets/img/demos/mi27@2x.jpg 2x"
-                                      alt=""
-                                    />
-                                  </figure>
-                                  <span class="d-lg-none">Demo XXVII</span>
-                                </a>
-                              </li>
-                            </ul>
-                           /.row -->
-                            <!-- <span class="d-none d-lg-flex"
-                              ><i class="uil uil-direction"></i
-                              ><strong>Scroll to view more</strong></span
-                            >
-                          </li> -->
-                          <!--/.mega-menu-content-->
-                        <!-- </ul>  -->
-                        <!--/.dropdown-menu -->
+                      
                       </li>
-                      <li class="nav-item dropdown">
+                      <li class="dropdown dropdown-submenu dropend">
                         <a
-                          class="nav-link  "
-                          href="#"
-                          data-bs-toggle="dropdown"
-                          >About Us</a
+                          class="dropdown-item  "
+                          href=" {% static 'teamsthiru.html' %} "
+                         
+                          >Team</a
                         >
-                        <ul class="dropdown-menu">
-                          <li class="dropdown dropdown-submenu dropend">
-                            <a
-                              class="dropdown-item  "
-                              href="#"
-                              data-bs-toggle="dropdown"
-                              >Our Campus</a
-                            >
-                          
-                          </li>
-                          <li class="dropdown dropdown-submenu dropend">
-                            <a
-                              class="dropdown-item  "
-                              href="#"
-                              data-bs-toggle="dropdown"
-                              >Team</a
-                            >
-                           
-                          </li>
-                          <li class="dropdown dropdown-submenu dropend">
-                            <a
-                              class="dropdown-item  "
-                              href="#"
-                              data-bs-toggle="dropdown"
-                              >Gallery</a
-                            >
-                           
-                          </li>
-                          <li class="dropdown dropdown-submenu dropend">
-                            <a
-                              class="dropdown-item  "
-                              href="#"
-                              data-bs-toggle="dropdown"
-                              >Career</a
-                            >
-                           
-                          </li>
-                        
-                          <li class="dropdown dropdown-submenu dropend">
-                            <a
-                              class="dropdown-item  "
-                              href="#"
-                              data-bs-toggle="dropdown"
-                              >Testimonials</a
-                            >
-                         
-                          </li>
-                          <li class="dropdown dropdown-submenu dropend">
-                            <a
-                              class="dropdown-item  "
-                              href="#"
-                              data-bs-toggle="dropdown"
-                              >Events & Awards</a
-                            >
-                         
-                          </li>
                        
-                        </ul>
                       </li>
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a
+                          class="dropdown-item  "
+                          href=" {% static 'thiruGallery.html' %} "
+                          
+                          >Gallery</a
+                        >
+                       
+                      </li>
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a
+                          class="dropdown-item  "
+                          href=" {% static 'thiruCareer.html' %} "
+                          
+                          >Career</a
+                        >
+                       
+                      </li>
+                    
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a
+                          class="dropdown-item  "
+                          href=" {% static 'thiruTestimonials.html' %} "
+                         
+                          >Testimonials</a
+                        >
+                     
+                      </li>
+                      <li class="dropdown dropdown-submenu dropend">
+                        <a
+                          class="dropdown-item  "
+                          href="#"
+                          data-bs-toggle="dropdown"
+                          >Events & Awards</a
+                        >
+                     
+                      </li>
+                   
+                    </ul>
+                  </li>
 <!-- about ends -->
 
 
 
 
-                      <li class="nav-item dropdown">
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link "
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      >Government Funding</a
+                    >
+                    <ul class="dropdown-menu">
+                      <li class="dropdown dropdown-submenu dropend">
                         <a
-                          class="nav-link "
+                          class="dropdown-item "
                           href="#"
                           data-bs-toggle="dropdown"
-                          >Government Funding</a
+                          >Government of India</a
                         >
                         <ul class="dropdown-menu">
-                          <li class="dropdown dropdown-submenu dropend">
-                            <a
-                              class="dropdown-item "
-                              href="#"
-                              data-bs-toggle="dropdown"
-                              >Government of India</a
+                          <li class="nav-item">
+                            <a class="dropdown-item  " href=" {% static 'thirubirac.html' %} "  
+                              >Ministry of Science and Technology</a
                             >
-                            <ul class="dropdown-menu">
-                              <li class="nav-item">
-                                <a class="dropdown-item  " href="#"  data-bs-toggle="dropdown"
-                                  >Ministry of Science and Technology</a
-                                >
-                            
-                              
-                              </li>
-                              <li class="nav-item">
-                                <a class="dropdown-item" href=" {% static 'services2.html' %} "
-                                  >Ministry of Commerce and Industry</a
-                                >
-                              </li>
-                              <li class="nav-item">
-                                <a class="dropdown-item" href=" {% static 'services2.html' %} "
-                                  >Fisheries startup grand challenge</a
-                                >
-                              </li>
-                              <li class="nav-item">
-                                <a class="dropdown-item" href=" {% static 'services2.html' %} "
-                                  >Ministry of Electronics and Information Technology</a
-                                >
-                              </li>
-                              <li class="nav-item">
-                                <a class="dropdown-item" href=" {% static 'services2.html' %} "
-                                  >Ministry of Education</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                          <li class="dropdown dropdown-submenu dropend">
-                            <a
-                              class="dropdown-item "
-                              href="#"
-                              data-bs-toggle="dropdown"
-                              >Government of Tamil Nadu</a
-                            >
-                            <ul class="dropdown-menu">
-                              <li class="nav-item">
-                                <a class="dropdown-item" href=" {% static 'about.html' %} "
-                                  >EDII-IVP</a
-                                >
-                              </li>
-                              <li class="nav-item">
-                                <a class="dropdown-item" href=" {% static 'about2.html' %} "
-                                  >Startup TN</a
-                                >
-                              </li>
-                            </ul>
-                          </li>
-                         
-                         
-                         
-                         
                         
-                        </ul>
-                      </li>
-
-
-                      <li class="nav-item dropdown">
-                        <a
-                          class="nav-link  "
-                          href="#"
-                          data-bs-toggle="dropdown"
-                          >MBA-IEV</a
-                        >
-                   
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a
-                          class="nav-link  "
-                          href="#"
-                          data-bs-toggle="dropdown"
-                          >Our Startups</a
-                        >
-                   
-                      </li>
-                   
-                      <li class="nav-item dropdown dropdown-mega">
-                        <a
-                          class="nav-link  "
-                          href="#"
-                          data-bs-toggle="dropdown"
-                          >Benefits</a
-                        >
-                        <ul class="dropdown-menu mega-menu" style="width: 400px;">
-                          <li class="mega-menu-content">
-                            <div class="row gx-0 gx-md-3" >
-                              <div class="col-md-6">
-                                <h5 class="dropdown-header">Mentor</h5>
-                                <ul class="list-unstyled cc-2 pb-lg-1">
-                                  <li>
-                                    <a class="dropdown-item" href=" {% static 'docs/index.html' %} "
-                                      >Mentor Clinic</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a class="dropdown-item" href=" {% static 'docs/forms.html' %} "
-                                      >Mentor Connect</a
-                                    >
-                                  </li>
-                                 
-                              
-                                </ul>
-                                <h5 class="dropdown-header mt-lg-6">Market</h5>
-                                <ul class="list-unstyled cc-2">
-                                  <li>
-                                    <a
-                                      class="dropdown-item"
-                                      href=" {% static 'docs/styleguide/colors.html' %} "
-                                      >Global Market Connect</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a
-                                      class="dropdown-item"
-                                      href=" {% static 'docs/styleguide/fonts.html' %} "
-                                      >Demo day</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a
-                                      class="dropdown-item"
-                                      href=" {% static 'docs/styleguide/icons-svg.html' %} "
-                                      >Launch Pad</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a
-                                      class="dropdown-item"
-                                      href=" {% static 'docs/styleguide/icons-font.html' %} "
-                                      >Startup Tools</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a
-                                      class="dropdown-item"
-                                      href=" {% static 'docs/styleguide/illustrations.html' %} "
-                                      >Illustrations</a
-                                    >
-                                  </li>
-                               
-                                 
-                                </ul>
-                              </div>
-                              <!--/column -->
-                              <div class="col-md-4" >
-                                <h5 class="dropdown-header" >Money</h5>
-                                <div style="margin-left: 30px;">
-                                <h6 >Government Aided Funding</h6>
-                                <ul class="list-unstyled cc-2">
-                                  <li style="padding-left: 60px;">
-                                    <a
-                                      class="dropdown-item"
-                                      href=" {% static 'docs/elements/accordion.html' %} "
-                                      >State Government Funding</a
-                                    >
-                                  </li>
-                                  <li style="padding-left: 60px;">
-                                    <a
-                                      class="dropdown-item"
-                                      href=" {% static 'docs/elements/alerts.html' %} "
-                                      >Central Government Funding</a
-                                    >
-                                  </li>
-                         
-                                </ul>
-                              </div>
-                              <div style="margin-left: 30px; margin-top: 20px;">
-                                <h6> Private Aided Funding</h6>
-                                <ul class="list-unstyled cc-2">
-                                  <li style="padding-left: 60px;">
-                                    <a
-                                      class="dropdown-item"
-                                      href=" {% static 'docs/elements/accordion.html' %} "
-                                      >Angel Investors</a
-                                    >
-                                  </li>
-                                  <li style="padding-left: 60px;">
-                                    <a
-                                      class="dropdown-item"
-                                      href=" {% static 'docs/elements/alerts.html' %} "
-                                      >Venture Capitalist</a
-                                    >
-                                  </li>
-                         
-                                </ul>
-                              </div>
-                              </div>
-                              <!--/column -->
-                            </div>
-                            <!--/.row -->
+                          
                           </li>
-                          <!--/.mega-menu-content-->
+                          <li class="nav-item">
+                            <a class="dropdown-item" href=" {% static 'thirusisfs.html' %} "
+                              >Ministry of Commerce and Industry</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="dropdown-item" href="#"
+                              >Fisheries startup grand challenge</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="dropdown-item" href=" {% static 'thirusamridth.html' %} "
+                              >Ministry of Electronics and Information Technology</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="dropdown-item" href=" {% static 'thirusamridth.html' %} "
+                              >Ministry of Education</a
+                            >
+                          </li>
                         </ul>
-                        <!--/.dropdown-menu -->
                       </li>
-                    </ul>
-                    <!-- /.navbar-nav -->
-                    <div class="offcanvas-footer d-lg-none">
-                      <div>
+                      <li class="dropdown dropdown-submenu dropend">
                         <a
-                          href=" {% static 'cdn-cgi/l/email-protection.html#b4d2ddc6c7c09ad8d5c7c0f4d1d9d5ddd89ad7dbd9' %} "
-                          class="link-inverse"
-                          ><span
-                            class="__cf_email__"
-                            data-cfemail="4f262129200f2a222e2623612c2022"
-                            >[email&#160;protected]</span
-                          ></a
+                          class="dropdown-item "
+                          href="#"
+                          data-bs-toggle="dropdown"
+                          >Government of Tamil Nadu</a
                         >
-                        <br />
-                        00 (123) 456 78 90 <br />
-                        <nav class="nav social social-white mt-4">
-                          <a href="#"><i class="uil uil-twitter"></i></a>
-                          <a href="#"><i class="uil uil-facebook-f"></i></a>
-                          <a href="#"><i class="uil uil-dribbble"></i></a>
-                          <a href="#"><i class="uil uil-instagram"></i></a>
-                          <a href="#"><i class="uil uil-youtube"></i></a>
-                        </nav>
-                        <!-- /.social -->
-                      </div>
-                    </div>
-                    <!-- /.offcanvas-footer -->
+                        <ul class="dropdown-menu">
+                          <li class="nav-item">
+                            <a class="dropdown-item" href=" {% static 'thiruEDI.html' %} "
+                              >EDII-IVP</a
+                            >
+                          </li>
+                          <li class="nav-item">
+                            <a class="dropdown-item" href="#"
+                              >Startup TN</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                     
+                     
+                     
+                     
+                    
+                    </ul>
+                  </li>
+
+
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link  "
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      >MBA-IEV</a
+                    >
+               
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link  "
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      >Our Startups</a
+                    >
+               
+                  </li>
+               
+                  <li class="nav-item dropdown dropdown-mega">
+                    <a
+                      class="nav-link  "
+                      href="#"
+                      data-bs-toggle="dropdown"
+                      >Benefits</a
+                    >
+                    <ul class="dropdown-menu mega-menu" style="width: 400px;">
+                      <li class="mega-menu-content">
+                        <div class="row gx-0 gx-md-3" >
+                          <div class="col-md-6">
+                            <h5 class="dropdown-header">Mentor</h5>
+                            <ul class="list-unstyled cc-2 pb-lg-1">
+                              <li>
+                                <a class="dropdown-item" href="#"
+                                  >Mentor Clinic</a
+                                >
+                              </li>
+                              <li>
+                                <a class="dropdown-item"
+                                  >Mentor Connect</a
+                                >
+                              </li>
+                             
+                          
+                            </ul>
+                            <h5 class="dropdown-header mt-lg-6">Market</h5>
+                            <ul class="list-unstyled cc-2">
+                              <li>
+                                <a
+                                  class="dropdown-item"
+                                
+                                  >Global Market Connect</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="dropdown-item"
+                                 
+                                  >Demo day</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="dropdown-item"
+                                 
+                                  >Launch Pad</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="dropdown-item"
+                                  
+                                  >Startup Tools</a
+                                >
+                              </li>
+                              <li>
+                                <a
+                                  class="dropdown-item"
+                                  
+                                  >Illustrations</a
+                                >
+                              </li>
+                           
+                             
+                            </ul>
+                          </div>
+                          <!--/column -->
+                          <div class="col-md-4" >
+                            <h5 class="dropdown-header" >Money</h5>
+                            <div style="margin-left: 30px;">
+                            <h6 >Government Aided Funding</h6>
+                            <ul class="list-unstyled cc-2">
+                              <li style="padding-left: 60px;">
+                                <a
+                                  class="dropdown-item"
+                                  
+                                  >State Government Funding</a
+                                >
+                              </li>
+                              <li style="padding-left: 60px;">
+                                <a
+                                  class="dropdown-item"
+                                  
+                                  >Central Government Funding</a
+                                >
+                              </li>
+                     
+                            </ul>
+                          </div>
+                          <div style="margin-left: 30px; margin-top: 20px;">
+                            <h6> Private Aided Funding</h6>
+                            <ul class="list-unstyled cc-2">
+                              <li style="padding-left: 60px;">
+                                <a
+                                  class="dropdown-item"
+                              
+                                  >Angel Investors</a
+                                >
+                              </li>
+                              <li style="padding-left: 60px;">
+                                <a
+                                  class="dropdown-item"
+                                 
+                                  >Venture Capitalist</a
+                                >
+                              </li>
+                     
+                            </ul>
+                          </div>
+                          </div>
+                          <!--/column -->
+                        </div>
+                        <!--/.row -->
+                      </li>
+                      <!--/.mega-menu-content-->
+                    </ul>
+                    <!--/.dropdown-menu -->
+                  </li>
+                </ul>
+                <!-- /.navbar-nav -->
+                <div class="offcanvas-footer d-lg-none">
+                  <div>
+                    <a
+                    
+                      class="link-inverse"
+                      ><span
+                        class="__cf_email__"
+                        data-cfemail="4f262129200f2a222e2623612c2022"
+                        >[email&#160;protected]</span
+                      ></a
+                    >
+                    <br />
+                    00 (123) 456 78 90 <br />
+                    <nav class="nav social social-white mt-4">
+                      <a href="#"><i class="uil uil-twitter"></i></a>
+                      <a href="#"><i class="uil uil-facebook-f"></i></a>
+                      <a href="#"><i class="uil uil-dribbble"></i></a>
+                      <a href="#"><i class="uil uil-instagram"></i></a>
+                      <a href="#"><i class="uil uil-youtube"></i></a>
+                    </nav>
+                    <!-- /.social -->
                   </div>
-                  <!-- /.offcanvas-body -->
                 </div>
-                <!-- /.navbar-collapse -->
-                <div class="navbar-other w-100 d-flex ms-auto">
-                  <ul class="navbar-nav flex-row align-items-center ms-auto">
-                    <li class="nav-item dropdown language-select text-uppercase">
-                
-                      <ul class="dropdown-menu">
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="#">En</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="#">De</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="dropdown-item" href="#">Es</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="nav-item d-none d-md-block">
-                      <a
-                        href=" {% static 'contact.html' %} "
-                        class="btn btn-sm btn-primary rounded-pill"
-                        >Contact</a
-                      >
-                    </li>
-                    <li class="nav-item d-lg-none">
-                      <button class="hamburger offcanvas-nav-btn">
-                        <span></span>
-                      </button>
-                    </li>
-                  </ul>
-                  <!-- /.navbar-nav -->
-                </div>
-                <!-- /.navbar-other -->
+                <!-- /.offcanvas-footer -->
               </div>
-              <!-- /.container -->
-            </nav>
-          </header>
+              <!-- /.offcanvas-body -->
+            </div>
+            <!-- /.navbar-collapse -->
+            <div class="navbar-other w-100 d-flex ms-auto">
+              <ul class="navbar-nav flex-row align-items-center ms-auto">
+               
+                <li class="nav-item d-none d-md-block">
+                  <a
+                    href=" {% static 'contact.html' %} "
+                    class="btn btn-sm btn-primary rounded-pill"
+                    >Contact</a
+                  >
+                </li>
+                <li class="nav-item d-lg-none">
+                  <button class="hamburger offcanvas-nav-btn">
+                    <span></span>
+                  </button>
+                </li>
+              </ul>
+              <!-- /.navbar-nav -->
+            </div>
+            <!-- /.navbar-other -->
+          </div>
+          <!-- /.container -->
+        </nav>
+      </header>
         <!-- <span style="position: absolute; bottom: 100px;left: 500px;z-index: 100; font-size: 30px; font-weight: 900">BIRAC</span> -->
 
             <!-- /.navbar -->
 
             <section class="wrapper bg-light angled lower-end">
-              <div class="container py-14 py-md-16">
+              <div style="margin-top: 30px; display: flex; align-items: center; justify-content: center;">
+                <h3>BIRAC</h3>
+              </div>
+              <div class="container py-8 py-md-10">
                 <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-center">
                   <div class="col-lg-6 position-relative order-lg-2">
                     <div class="shape bg-dot primary rellax w-16 h-20" data-rellax-speed="1" style="top: 3rem; left: 5.5rem"></div>
@@ -758,32 +407,21 @@
                       </div>
                     </div>
                   </div>
-                  <!--/column -->
+                  <!--/column -->{% load i18n %}
                   <div class="col-lg-6">
               
-                    <h2 class="display-4 mb-3" style="width: 800px;">DBT (Department of Biotechnology)</h2>
-                    <p class="lead fs-lg">Biotechnology Industry Research Assistance Council (BIRAC)</p>
-                    <p class="mb-6">Biotechnology Industry Research Assistance Council (BIRAC) is a not-for-profit Section 8, Schedule B, Public Sector Enterprise, set up by Department of Biotechnology (DBT), Government of India as an Interface Agency to strengthen and empower the emerging Biotech enterprise to undertake strategic research and innovation, addressing nationally relevant product development needs.</p>
+                    <h2 class="display-4 mb-3" style="width: 800px;">{{ birac.title }}</h2>
+                    <p class="lead fs-lg">{{ birac.subtitle }}</p>
+                    <p class="mb-6">{{ birac.description }}</p>
                     <div class="row gy-3 gx-xl-8">
-                      <h6>Overview</h6>
-                      <div class="col-xl-6">
-                       
+                      <h6>Overview </h6>
+                      <div class="col-xl-6">  
                         <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-                          <li><span><i class="uil uil-check"></i></span><span> <span style="font-weight: bolder; display: block;">Project Title:</span> Crescent Biotech Incubator for Nurturing Student Entrepreneurs</span></li>
-                          <li class="mt-3"><span><i class="uil uil-check"></i></span><span><span style="font-weight: bolder; display: block;">Start Date of the project:</span> 06.06.2019</span></li>
-                          <li class="mt-3"><span><i class="uil uil-check"></i></span><span><span style="font-weight: bolder; display: block;">Schedule completion date: </span>06.06.2022</span></li>
+                          {% for i,j in topic.items %}
+                          <li><span><i class="uil uil-check"></i></span><span> <span style="font-weight: bolder; display: block;">{{ i }}</span> {{ j }}</span></li>
+                          {% endfor %}
                         </ul>
                       </div>
-                      <!--/column -->
-                      <div class="col-xl-6">
-                        <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-                          <li><span><i class="uil uil-check"></i></span><span> <span style="font-weight: bolder; display: block;">Name of the organisation: </span> Crescent Innovation and Incubation Council (CIIC)</span></li>
-                          <li class="mt-3"><span><i class="uil uil-check"></i></span><span ><span style="font-weight: bolder; display: block;">Name of the PI:</span> Mr. M. Parvez Alam, CEO & Director, CIIC</span></li>
-                          <li class="mt-3"><span><i class="uil uil-check"></i></span><span> <span style="font-weight: bolder; display: block;">Total Incubatees supported till now: </span> 79
-                          </span></li>
-                        </ul>
-                      </div>
-                      <!--/column -->
                     </div>
                     <!--/.row -->
                   </div>
@@ -949,109 +587,99 @@
 
            </section>
 </div>
-    <section id="snippet-3" class="wrapper bg-light wrapper-border">
-      <div class="container-fluid pt-15 pt-md-17 pb-13 pb-md-15 px-xxl-10">
-        <footer class="bg-dark text-inverse">
-          <div class="container pt-13 pt-md-15 pb-7">
-            <div class="row gy-6 gy-lg-0">
-              <div class="col-lg-4">
-                <div class="widget">
-                  <h3 class="h2 mb-1 text-white">Crescent Innovation and Incubation Council</h3>
-                  <p class="lead mb-5">
-                    B.S. Abdur Rahman Crescent Institute of Science and Technology,
-                    GST Road, Chennai - 600048,
-                    Tamil Nadu, India
-                    
-                   <span style="display: block; margin-top: 10px;"> Ph.No : 044 - 22759200,</span>
-                   <span style="display: block; margin-top: 10px;"> EXN : 485 & 486 </span>
-                    
-                   <span style="display: block; margin-top: 10px;">    Mail Id : info.ciic@crescent.education</span>
-                  </p>
-                  
-                </div>
-                <!-- /.widget -->
-              </div>
-              <!-- /column -->
-              <div class="col-md-4 col-lg-2 offset-lg-2">
-                <div class="widget">
-                  <h4 class="widget-title text-white mb-3">Quick Links</h4>
-                  <ul class="list-unstyled text-reset mb-0">
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Policy</a></li>
-                    <li><a href="#">Events & Awards</a></li>
-                    <li><a href="#">Our Startup</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Career</a></li>
-                  </ul>
-                </div>
-                <!-- /.widget -->
-              </div>
-              <!-- /column -->
-              <div class="col-md-4 col-lg-2">
-                <div class="widget">
-                  <h4 class="widget-title text-white mb-3">Government Funding</h4>
-                  <ul class="list-unstyled mb-0">
-                    <li><a href="#">BIRAC - Bionest</a></li>
-                    <li><a href="#">SISFS</a></li>
-                    <li><a href="#">EDII-IVP</a></li>
-                 
-                  </ul>
-                </div>
-                <!-- /.widget -->
-              </div>
-              <div class="col-md-4 col-lg-2">
-                <div class="widget">
-                  <h4 class="widget-title text-white mb-3">Mentor Connect</h4>
-                  <ul class="list-unstyled mb-0">
-                    <li><a href="#">Business Mentors</a></li>
-                    <li><a href="#">Financial Mentors</a></li>
-                    <li><a href="#">Life Sciences Mentors</a></li>
-                    <li><a href="#">Technical Mentors</a></li>
-          
-                  </ul>
-                </div>
-                <div class="widget">
-                    <h4 class="widget-title text-white mb-3">Market Connect</h4>
-                    <ul class="list-unstyled mb-0">
-                      <li><a href="#">Global Market Connect</a></li>
-                      <li><a href="#">Launch Pad</a></li>
-                      <li><a href="#">Demo Day
-                    </a></li>
-                      <li><a href="#">Startup Tools</a></li>
-            
-                    </ul>
-                  </div>
-                <!-- /.widget -->
-              </div>
-
-              <!-- /column -->
-             
-              <!-- /column -->
+<section id="snippet-3" class="wrapper bg-light wrapper-border">
+  <div class="container-fluid pt-15 pt-md-17 pb-0 pb-md-0 px-xxl-01">
+    <footer class="bg-dark text-inverse">
+      <div class="container pt-13 pt-md-15 pb-7">
+        <div class="row gy-6 gy-lg-0">
+          <div class="col-lg-4">
+            <div class="widget">
+              <h3 class="h2 mb-1 text-white">TBI Innovation and Incubation Council</h3>
+              <p class="lead mb-5">
+                     TBI Institute of Science and Technology,
+                GST Road, Chennai - 600048,
+                Tamil Nadu, India
+                
+               <span style="display: block; margin-top: 10px;"> Ph.No : 044 - 22759200,</span>
+               <span style="display: block; margin-top: 10px;"> EXN : 485 & 486 </span>
+                
+               <span style="display: block; margin-top: 10px;">    Mail Id : info.ciic@TBI.education</span>
+              </p>
+              
             </div>
-            <!--/.row -->
-            <hr class="mt-13 mt-md-15 mb-7" />
-            <div class="d-md-flex align-items-center justify-content-between">
-              <p class="mb-2 mb-lg-0">© 2022 WT. All rights reserved.</p>
-              <nav class="nav social social-white text-md-end">
-                <a href="#"><i class="uil uil-twitter"></i></a>
-                <a href="#"><i class="uil uil-facebook-f"></i></a>
-                <a href="#"><i class="uil uil-dribbble"></i></a>
-                <a href="#"><i class="uil uil-instagram"></i></a>
-                <a href="#"><i class="uil uil-youtube"></i></a>
-              </nav>
-              <!-- /.social -->
-            </div>
-            <!-- /div -->
+            <!-- /.widget -->
           </div>
-          <!-- /.container -->
-        </footer>
-      </div>
-      <!-- /.container -->
+          <!-- /column -->
+          <div class="col-md-4 col-lg-2 offset-lg-2">
+            <div class="widget">
+              <h4 class="widget-title text-white mb-3">Quick Links</h4>
+              <ul class="list-unstyled text-reset mb-0">
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Policy</a></li>
+                <li><a href="#">Events & Awards</a></li>
+                <li><a href="#">Our Startup</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Career</a></li>
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4 col-lg-2">
+            <div class="widget">
+              <h4 class="widget-title text-white mb-3">Government Funding</h4>
+              <ul class="list-unstyled mb-0">
+                <li><a href="#">BIRAC - Bionest</a></li>
+                <li><a href="#">SISFS</a></li>
+                <li><a href="#">EDII-IVP</a></li>
+             
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <div class="col-md-4 col-lg-2">
+            <div class="widget">
+              <h4 class="widget-title text-white mb-3">Mentor Connect</h4>
+              <ul class="list-unstyled mb-0">
+                <li><a href="#">Business Mentors</a></li>
+                <li><a href="#">Financial Mentors</a></li>
+                <li><a href="#">Life Sciences Mentors</a></li>
+                <li><a href="#">Technical Mentors</a></li>
+      
+              </ul>
+            </div>
+            <div class="widget">
+                <h4 class="widget-title text-white mb-3">Market Connect</h4>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="#">Global Market Connect</a></li>
+                  <li><a href="#">Launch Pad</a></li>
+                  <li><a href="#">Demo Day
+                </a></li>
+                  <li><a href="#">Startup Tools</a></li>
+        
+                </ul>
+              </div>
+            <!-- /.widget -->
+          </div>
+
+          <!-- /column -->
+         
+          <!-- /column -->
+        </div>
+        <!--/.row -->
+        <hr class="mt-13 mt-md-15 mb-7" />
   
-        <!--/.card -->
+        <!-- /div -->
       </div>
       <!-- /.container -->
-    </section>
+    </footer>
+  </div>
+  <!-- /.container -->
+
+    <!--/.card -->
+  </div>
+  <!-- /.container -->
+</section>
     <script
     data-cfasync="false"
     src=" {% static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %} "
