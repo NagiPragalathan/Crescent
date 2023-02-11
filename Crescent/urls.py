@@ -93,7 +93,12 @@ urlpatterns = [
     path("globalMarket",views.GlobalMarket),
     path("EDI",views.EDI),
     path("Home",views.home),
+    
     path("Mentor_Connect",views.MentorConnect),
+    path("Mentor_Connect_edit",views.MontorConnect_edit),
+    path("Mentor_Connect_save",views.MontorConnect_save),
+    path("view_mentor",views.view_MentorConnect),
+
     path("Mentor_Clinic",views.MentorClinic),
 
     path("new_ventures",views.newVentures),

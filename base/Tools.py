@@ -1,4 +1,4 @@
-from .models import Gallery,Team,logo,blog
+from .models import Gallery,Team,logo,blog, MentorConnectDB
 import random
 def get_vals(request,data):
     datas = []
@@ -66,4 +66,3 @@ def get_blog():
     for x,i in enumerate(items):
         items[x] = i[::-1]
     return items
-

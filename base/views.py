@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Gallery,Team,logo,Carrer,blog,Testimonials,Events,Birac,Tbi,Sisfs,EventsForm
+from .models import Gallery,Team,logo,Carrer,blog,Testimonials,Events,Birac,Tbi,Sisfs,EventsForm,MentorConnectDB
 from .Tools import get_images,get_team,reguler_datas,get_blog
 import datetime
 import json
@@ -495,4 +495,77 @@ def convert_excel(request):
     return render(request,"home/view_blog.html")
 
 
+def EDI (request):
+    return render(request,"fund/edi.html")
+
+
+
+def about (request):
+    return render(request,"a/thiruabout.html")
+
+def angelInvestor (request):
+    return render(request,"angelinvestor.html")
+
+def GlobalMarket (request):
+    return render(request,"globalmarket.html")
+
+def home(request):
+    return render(request,"index.html")
+
+def MentorClinic (request):
+    return render(request,"mentorclinic.html")
+
+
+
+def MentorConnect (request):
+    return render(request,"mentorconnect.html")
+
+def view_MentorConnect (request):
+    return render(request,"edtior/view_mentor.html",{'mentor':MentorConnectDB.objects.all()})
+    
+def MontorConnect_edit(request):
+    return render(request,"edtior/mentor_connect_edit.html")
+
+def MontorConnect_save(request):
+    content = request.POST.get('#content')
+    if request.POST.get('#page') == 'MentorConnect':
+        obj = MentorConnectDB(Content=content)
+        obj.save()
+    print("saved.....................................////////////////////////")
+    return render(request,"edtior/mentor_connect_edit.html")
+
+
+
+def newVentures (request):
+    return render(request,"newventures.html")
+
+def ourStartups (request):
+    return render(request,"ourstartup.html")
+
+def samridth (request):
+    return render(request,"samridth.html")
+
+def service (request):
+    return render(request,"service.html")
+
+def sisfs(request):
+    return render(request,"sisfs.html")
+
+def stategovtfunds (request):
+    return render(request,"stategovtfund.html")
+
+def testimonial (request):
+    return render(request,"testimonials.html")
+
+def Mba (request):
+    return render(request,"mba.html")
+
+def birac (request):
+    return render(request,"birac.html")
+
+def career (request):
+    return render(request,"carrer.html")
+
+def gallery (request):
+    return render(request,"gallery.html")
 

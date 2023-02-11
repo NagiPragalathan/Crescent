@@ -334,30 +334,18 @@
                                 <div class="p-6 bg-white border-b border-gray-200">
                                     <form method="POST">
                                             {% csrf_token %}
-                                        <div class="mb-4">
-                                            <label class="text-xl text-gray-600">Title <span class="text-red-500">*</span></label></br>
-                                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="title" id="title" value="" required>
-                                        </div>
+                                        <label for="cars">Select the page :</label>
 
-                                        <div class="mb-4">
-                                            <label class="text-xl text-gray-600">Description</label></br>
-                                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="description" id="description" placeholder="(Optional)">
-                                        </div>
-
-                                        <div class="mb-4">
-                                            <label class="text-xl text-gray-600">Thumbnail image</label></br>
-                                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="Thumbnail" id="Thumbnail" placeholder="(Optional)">
-                                        </div>
-
-                                        <div class="mb-4">
-                                            <label class="text-xl text-gray-600">Category</label></br>
-                                            <input type="text" class="border-2 border-gray-300 p-2 w-full" name="Category" id="Category" placeholder="(Optional)">
-                                        </div>
+                                        <select name="cars" id="page">
+                                              <option value="MentorConnect">MentorConnect</option>
+                                              <option value="saab">Saab</option>
+                                              <option value="mercedes">Mercedes</option>
+                                              <option value="audi">Audi</option>
+                                        </select>
 
                                         <div class="mb-8">
                                             <label class="text-xl text-gray-600">Content <span class="text-red-500">*</span></label></br>
                                             <textarea name="editor2" id="editor2" class="border-2 border-gray-500">
-                                                
                                             </textarea>
                                         </div>
 
@@ -366,7 +354,7 @@
                                                 <option>Save and Publish</option>
                                                 <option>Save Draft</option>
                                             </select>
-                                            <button onclick="img_upload('save_blog','#content',['#title','#description','#Category','#Thumbnail'])" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
+                                            <button onclick="img_upload('Mentor_Connect_save','#content',['#page'])" class="p-3 bg-blue-500 text-white hover:bg-blue-400" required>Submit</button>
                                         </div>
                                     </form>
                                 </div>

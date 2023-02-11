@@ -149,3 +149,36 @@ class EventsForm(models.Model):
     event      = models.CharField(max_length = 200,default='event')
     linkedin  = models.CharField(max_length = 200,default='linkedin')
     website      = models.CharField(max_length = 200,default='website')
+
+
+class MentorConnectDB(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Content   = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Content 
+
+class MentorClinicDB(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Content   = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Content 
+
+class GlobalMarketConnectDB(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Content   = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Content 
+
+class DemodayDB(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Content   = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Content 
