@@ -8,7 +8,7 @@ import openpyxl
 # Create your views here.
 
 def home(request):
-    return render(request,"old/home.html")
+    return render(request,"index.html")
 
 def admin(request):
     item = get_images()
