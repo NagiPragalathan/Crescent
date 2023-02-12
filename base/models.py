@@ -182,3 +182,35 @@ class DemodayDB(models.Model):
     
     def __str__(self):
         return self.Content 
+
+class StateGovernmentFundingDB(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Content   = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Content 
+
+class CentralGovernmentFundingDB(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Content   = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Content 
+
+class AngelInvestorsDB(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Content   = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Content 
+
+class VentureCapitalistDB(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Content   = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Content 

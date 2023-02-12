@@ -41,8 +41,6 @@ urlpatterns = [
     path('delete_birac',views.delete_birac),
     path('set_birac',views.set_birac),
 
-
-
     path('logo',views.update_logo),
     path('upload_logo',views.upload_logo),
     path('delete_logo',views.delete_logo),
