@@ -107,7 +107,7 @@ path("MBA",views.Mba),
 path ("birac",views.birac),
 path("career",views.career),
 path("gallery",views.gallery),
-
+path("demo",views.demo),
 
 path("about",views.about),
 ]

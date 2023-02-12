@@ -550,3 +550,6 @@ def career (request):
 
 def gallery (request):
     return render(request,"gallery.html")
+
+def demo (request):
+    return render(request,"demoday.html")
