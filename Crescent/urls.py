@@ -114,6 +114,7 @@ path("startupTN",views.startupTN),
 path("events",views.eventsTBI),
 
 path("home_edit",views.home_edit),
+path("ourstartup_edit",views.ourstartup),
 
 
 ]

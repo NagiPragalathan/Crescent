@@ -562,3 +562,6 @@ def eventsTBI (request):
 
 def home_edit (request):
     return render(request,"pages/home.html")
+
+def ourstartup (request):
+    return render(request,"pages/ourstartup.html")
