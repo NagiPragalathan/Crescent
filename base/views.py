@@ -553,3 +553,12 @@ def gallery (request):
 
 def demo (request):
     return render(request,"demoday.html")
+
+def startupTN (request):
+    return render(request,"startupTN.html")
+
+def eventsTBI (request):
+    return render(request,"events.html")
+
+def home_edit (request):
+    return render(request,"pages/home.html")

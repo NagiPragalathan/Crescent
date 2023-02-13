@@ -110,6 +110,12 @@ path("gallery",views.gallery),
 path("demo",views.demo),
 
 path("about",views.about),
+path("startupTN",views.startupTN),
+path("events",views.eventsTBI),
+
+path("home_edit",views.home_edit),
+
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
