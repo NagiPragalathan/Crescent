@@ -87,7 +87,7 @@ urlpatterns = [
     path('set_sisfs',views.set_sisfs),
 
     path("about",views.about),
-    path("angelInvestor",views.angelInvestor),
+    
     path("globalMarket",views.GlobalMarket),
     path("EDI",views.EDI),
     path("Home",views.home),
@@ -95,19 +95,27 @@ urlpatterns = [
     path("Mentor_Connect",views.MentorConnect),
     path("Mentor_Connect_edit",views.MontorConnect_edit),
     path("Mentor_Connect_save",views.MontorConnect_save),
-    path("view_mentor",views.view_MentorConnect),
 
     path("Mentor_Clinic",views.MentorClinic),
+    path("Mentor_Clinic_edit",views.Mentor_Clinic_edit),
+    path("Mentor_Clinic_save",views.Mentor_Clinic_save),
 
-    path("new_ventures",views.newVentures),
+    path("angelInvestor",views.angelInvestor),
+    path("angelInvestor_edit",views.angelInvestor_edit),
+    path("angelInvestor_save",views.angelInvestor_save),
+
+    path("new_ventures",views.new_ventures),
+    path("new_ventures_edit",views.new_ventures_edit),
+    path("new_ventures_save",views.new_ventures_save),
+
     path("ourstartups",views.ourStartups),
     path("samridth",views.samridth),
     path("service",views.service),
     path("sisfs",views.sisfs),
     path("stategovtfunds",views.stategovtfunds),
     path("testimonial",views.testimonial),
+     
     path("MBA",views.Mba),
-    path("birac",views.birac),
     path("career",views.career),
     path("gallery",views.gallery),
 

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Gallery,Team,logo,Carrer,blog,Testimonials,Events,Birac,Tbi,Sisfs,EventsForm,MentorConnectDB
+from .models import Gallery,Team,logo,Carrer,blog,Testimonials,Events,Birac,Tbi,Sisfs,EventsForm,MentorConnectDB,MentorClinicDB, angelInvestorDB, new_venturesDB
 from .Tools import get_images,get_team,reguler_datas,get_blog
 import datetime
 import json
@@ -518,13 +518,10 @@ def MentorClinic (request):
 
 
 def MentorConnect (request):
-    return render(request,"mentorconnect.html")
+    return render(request,"mentorconnect.html",{'mentor':MentorConnectDB.objects.all()[::-1]})
 
-def view_MentorConnect (request):
-    return render(request,"edtior/view_mentor.html",{'mentor':MentorConnectDB.objects.all()})
-    
 def MontorConnect_edit(request):
-    return render(request,"edtior/mentor_connect_edit.html")
+    return render(request,"edtior/mentor_connect_edit.html",{'mentor':MentorConnectDB.objects.all()[::-1]})
 
 def MontorConnect_save(request):
     content = request.POST.get('#content')
@@ -536,8 +533,52 @@ def MontorConnect_save(request):
 
 
 
-def newVentures (request):
-    return render(request,"newventures.html")
+def MentorClinic (request):
+    return render(request,"mentorclinic.html")
+
+def Mentor_Clinic_edit(request):
+    return render(request,"edtior/Mentor_Clinic_edit.html",{'mentor':MentorClinicDB.objects.all()[::-1]})
+
+def Mentor_Clinic_save(request):
+    content = request.POST.get('#content')
+    obj = MentorClinicDB(Content=content)
+    obj.save()
+    print("saved.....................................////////////////////////")
+    return render(request,"edtior/Mentor_Clinic_edit.html")
+
+
+def angelInvestor (request):
+    return render(request,"angelInvestor.html",{'mentor':angelInvestorDB.objects.all()[::-1]})
+
+def angelInvestor_edit(request):
+    return render(request,"edtior/angelInvestor_edit.html",{'mentor':angelInvestorDB.objects.all()[::-1]})
+
+def angelInvestor_save(request):
+    content = request.POST.get('#content')
+    obj = angelInvestorDB(Content=content)
+    obj.save()
+    for i in angelInvestorDB.objects.all():
+        print(i.Content)
+    print("saved.....................................////////////////////////")
+    return render(request,"edtior/angelInvestor_edit.html")
+
+def new_ventures (request):
+    data = new_venturesDB.objects.all()[::-1]
+    print(data)
+    return render(request,"newventures.html",{'mentor':data,'sample':'hi'})
+
+def new_ventures_edit(request):
+    return render(request,"edtior/new_ventures_edit.html",{'mentor':new_venturesDB.objects.all()[::-1]})
+
+def new_ventures_save(request):
+    content = request.POST.get('#content')
+    obj = new_venturesDB(Content=content)
+    obj.save()
+    for i in new_venturesDB.objects.all():
+        print(i.Content)
+    print("saved.....................................////////////////////////")
+    return render(request,"edtior/new_ventures_edit.html")
+
 
 def ourStartups (request):
     return render(request,"ourstartup.html")
@@ -559,9 +600,6 @@ def testimonial (request):
 
 def Mba (request):
     return render(request,"mba.html")
-
-def birac (request):
-    return render(request,"birac.html")
 
 def career (request):
     return render(request,"carrer.html")

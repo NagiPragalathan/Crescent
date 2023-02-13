@@ -214,3 +214,19 @@ class VentureCapitalistDB(models.Model):
     
     def __str__(self):
         return self.Content 
+
+class angelInvestorDB(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Content   = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Content 
+
+class new_venturesDB(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Content   = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Content 
