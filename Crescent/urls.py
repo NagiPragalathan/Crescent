@@ -115,7 +115,7 @@ path("events",views.eventsTBI),
 
 path("home_edit",views.home_edit),
 path("ourstartup_edit",views.ourstartup),
-
+path("mba_edit",views.MBA_edit)
 
 ]
 if settings.DEBUG:

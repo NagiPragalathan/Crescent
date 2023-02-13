@@ -565,3 +565,6 @@ def home_edit (request):
 
 def ourstartup (request):
     return render(request,"pages/ourstartup.html")
+
+def MBA_edit (request):
+    return render(request,"pages/MBA.html")
