@@ -119,8 +119,21 @@ urlpatterns = [
     path("career",views.career),
     path("gallery",views.gallery),
 
+    path("home_edit",views.home_edit),
+    path("whoweare_save",views.Whoweare),
+    path("Home_TESTIMONIAL",views.Home_TESTIMONIAL),
+    path("Contact_Section",views.Contact_Section),
+    path("investors",views.investors),
+    path("International_Partners",views.International),
+    path("Govt_Tie",views.GovtTie),
+    path("upload_images",views.Upload_Image),
 
-    path("about",views.about),
+
+
+
+
+
+
 
 ]
 if settings.DEBUG:

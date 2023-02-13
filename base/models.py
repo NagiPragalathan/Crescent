@@ -230,3 +230,78 @@ class new_venturesDB(models.Model):
     
     def __str__(self):
         return self.Content 
+
+
+class WhoAreWe(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    SubHeading   = models.CharField(max_length = 2000)
+    Point1   = models.CharField(max_length = 2000)
+    Point2   = models.CharField(max_length = 2000)
+    Point3   = models.CharField(max_length = 2000)
+    Point4   = models.CharField(max_length = 2000)
+    image           = models.ImageField(upload_to='WhoAreWe/%Y/%m/%d',default='carrer/Screenshot_3.png')
+    
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.SubHeading 
+
+class HOME_TESTIMONIAL(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Testimonial_content   = models.CharField(max_length = 2000)
+    Name   = models.CharField(max_length = 2000)
+    Designation   = models.CharField(max_length = 2000)
+    image           = models.ImageField(upload_to='HOME_TESTIMONIAL/%Y/%m/%d',default='carrer/Screenshot_3.png')
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Testimonial_content
+
+class Contact_SECTION(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Title   = models.CharField(max_length = 2000)
+    Address   = models.CharField(max_length = 2000)
+    Phone_number   = models.CharField(max_length = 2000)
+    E_Mail           = models.ImageField(upload_to='HOME_TESTIMONIAL/%Y/%m/%d',default='carrer/Screenshot_3.png')
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Title
+
+
+class Investors(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Title   = models.CharField(max_length = 2000)
+    image           = models.ImageField(upload_to='Investors/%Y/%m/%d',default='carrer/Screenshot_3.png')
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Title
+
+class International_Partners(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Title   = models.CharField(max_length = 2000)
+    image           = models.ImageField(upload_to='Investors/%Y/%m/%d',default='carrer/Screenshot_3.png')
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Title
+
+class Govt_Tie(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Title   = models.CharField(max_length = 2000)
+    image           = models.ImageField(upload_to='Investors/%Y/%m/%d',default='carrer/Screenshot_3.png')
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Title
+
+class UploadImage(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Title   = models.CharField(max_length = 2000)
+    content   = models.CharField(max_length = 2000)
+    image           = models.ImageField(upload_to='Investors/%Y/%m/%d',default='carrer/Screenshot_3.png')
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Title

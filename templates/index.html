@@ -434,20 +434,20 @@
         data-items="1">
         <div class="swiper">
           <div class="swiper-wrapper">
+            {% for i in Uploadimage %}
             <div class="swiper-slide bg-overlay bg-overlay-400 bg-dark bg-image"
-              data-image-src="{% static 'assets/img/photos/bg7.jpg' %}">
+              data-image-src="{{ i.image.url }}">
               <div class="container h-100">
                 <div class="row h-100">
                   <div
                     class="col-md-10 offset-md-1 col-lg-7 offset-lg-0 col-xl-6 col-xxl-5 text-center text-lg-start justify-content-center align-self-center align-items-start">
                     <h2
                       class="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
-                      Welcome to TBI
+                      {{ i.Title }}
                     </h2>
                     <p
                       class="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-                      CIIC within 3 years of it’s inception has incubated 120 startups till date,CIIC always strives to
-                      strengthen the startup ecosystem by providing state-of-the-art services to startups.
+                      {{ i.content }}
                     </p>
 
                   </div>
@@ -458,53 +458,8 @@
               <!--/.container -->
             </div>
             <!--/.swiper-slide -->
-            <div class="swiper-slide bg-overlay bg-overlay-400 bg-dark bg-image"
-              data-image-src="{% static 'assets/img/photos/bg8.jpg' %}">
-              <div class="container h-100">
-                <div class="row h-100">
-                  <div
-                    class="col-md-11 col-lg-8 col-xl-7 col-xxl-6 mx-auto text-center justify-content-center align-self-center">
-                    <h2
-                      class="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
-                      MOU with Cambridge
-                    </h2>
-                    <p
-                      class="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-                      We help budding start-ups
-                    </p>
-
-                  </div>
-                  <!--/column -->
-                </div>
-                <!--/.row -->
-              </div>
-              <!--/.container -->
-            </div>
             <!--/.swiper-slide -->
-            <div class="swiper-slide bg-overlay bg-overlay-400 bg-dark bg-image"
-              data-image-src="{% static 'assets/img/photos/bg9.jpg' %}">
-              <div class="container h-100">
-                <div class="row h-100">
-                  <div
-                    class="col-md-10 offset-md-1 col-lg-7 offset-lg-5 col-xl-6 offset-xl-6 col-xxl-5 offset-xxl-6 text-center text-lg-start justify-content-center align-self-center align-items-start">
-                    <h2
-                      class="display-1 fs-56 mb-4 text-white animate__animated animate__slideInDown animate__delay-1s">
-                      Just sit and relax.
-                    </h2>
-                    <p
-                      class="lead fs-23 lh-sm mb-7 text-white animate__animated animate__slideInRight animate__delay-2s">
-                      We make sure your Idea become a Product
-                    </p>
-                    <div class="animate__animated animate__slideInUp animate__delay-3s">
-                      <a href="thiruContact.html" class="btn btn-lg btn-outline-white rounded-pill">Contact Us</a>
-                    </div>
-                  </div>
-                  <!--/column -->
-                </div>
-                <!--/.row -->
-              </div>
-              <!--/.container -->
-            </div>
+            {% endfor %}
             <!--/.swiper-slide -->
           </div>
           <!--/.swiper-wrapper -->
@@ -520,7 +475,7 @@
             <div class="shape bg-dot primary rellax w-16 h-20" data-rellax-speed="1" style="top: 3rem; left: 5.5rem"></div>
             <div class="overlap-grid overlap-grid-2">
               <div class="item">
-                <figure class="rounded shadow"><img src="https://i.pinimg.com/736x/85/d0/2d/85d02d0f320289adbf3de643c3d66660.jpg' %}" alt=""></figure>
+                <figure class="rounded shadow"><img src="{{ whoweare.0.image.url }}" alt=""></figure>
               </div>
               <div class="item">
                 <figure class="rounded shadow"><img src="https://media.istockphoto.com/id/1218524115/vector/student-following-online-courses-on-her-computer-at-home.jpg' %}?s=612x612&w=0&k=20&c=qTqq5Ufq1Lycli_o5K63L73OaV1uJ0C-RJi0c2OgcSo=" srcset="{% static 'assets/img/photos/about2@2x.jpg' %} 2x" srcset="{% static 'assets/img/photos/about3@2x.jpg' %} 2x" alt=""></figure>
@@ -531,19 +486,19 @@
           <div class="col-lg-6">
             <img src="{% static 'assets/img/icons/lineal/megaphone.svg'  %}" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
             <h2 class="display-4 mb-3">Who Are We?</h2>
-            <p class="lead fs-lg">Our visions To become a University based Technology Based Incubator of Excellence with national & international allusion parameters</p>
+            <p class="lead fs-lg">{{ whoweare.0.SubHeading }}</p>
             <div class="row gy-3 gx-xl-8">
               <div class="col-xl-6">
                 <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-                  <li><span><iconify-icon icon="mdi:menu-right-outline" width="20" height="20"></iconify-icon></span><span>tbi Innovation & Incubation Council (CIIC) is under the ambit of   tbi Institute of Science and Technology which is deemed to be University under Section 3 of UGC Act 1956.</span></li>
-                  <li class="mt-3"><span><iconify-icon icon="mdi:menu-right-outline" width="20" height="20"></iconify-icon></span><span>CIIC has been established as a Section-8 not for profit company and registered under Indian Companies Act 2013.</span></li>
+                  <li><span><iconify-icon icon="mdi:menu-right-outline" width="20" height="20"></iconify-icon></span><span>{{ whoweare.0.Point1 }}</span></li>
+                  <li class="mt-3"><span><iconify-icon icon="mdi:menu-right-outline" width="20" height="20"></iconify-icon></span><span>{{ whoweare.0.Point2 }}</span></li>
                 </ul>
               </div>
               <!--/column -->
               <div class="col-xl-6">
                 <ul class="icon-list bullet-bg bullet-soft-primary mb-0">
-                  <li><span><iconify-icon icon="mdi:menu-right-outline" width="20" height="20"></iconify-icon></span><span>CIIC acts as a “One Stop Shop – Startup Incubator” for startups that facilitates entrepreneurial & innovative ecosystem to all the stakeholders including the Students, faculty members, industries, investors and society at large.</span></li>
-                  <li class="mt-3"><span><iconify-icon icon="mdi:menu-right-outline" width="20" height="20"></iconify-icon></span><span>CIIC is presently focusing on the disruptive technologies in the domains of Industry 4.0, Smart & Clean Mobility and Life Sciences.</span></li>
+                  <li><span><iconify-icon icon="mdi:menu-right-outline" width="20" height="20"></iconify-icon></span><span>{{ whoweare.0.Point3 }}</span></li>
+                  <li class="mt-3"><span><iconify-icon icon="mdi:menu-right-outline" width="20" height="20"></iconify-icon></span><span>{{ whoweare.0.Point4 }}</span></li>
                 </ul>
               </div>
               <!--/column -->
@@ -559,18 +514,18 @@
         <div class="row gx-lg-8 gx-xl-0 align-items-center">
           <div class="col-md-5 col-lg-4 offset-lg-1 d-none d-md-flex position-relative">
             <div class="shape rounded-circle bg-pale-primary rellax w-21 h-21" data-rellax-speed="1" style="top: 7rem; left: 1rem"></div>
-            <figure><img src="{% static 'assets/img/photos/co1.png' %}" srcset="./{% static 'assets/img/photos/co1@2x.png' %} 2x" alt=""></figure>
+            <figure><img src="{{ ht.0.image.url }}" srcset="./{% static 'assets/img/photos/co1@2x.png' %} 2x" alt=""></figure>
           </div>
           <!--/column -->
           <div class="col-md-7 col-lg-6 col-xl-6 col-xxl-5 offset-xl-1">
             <div class="basic-slider owl-carousel dots-start gap-small mt-6" data-margin="30">
               <div class="item">
                 <blockquote class="icon fs-lg">
-                  <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur nulla dapibus curabitur blandit.”</p>
+                  <p>{{ ht.0.Testimonial_content }}</p>
                   <div class="blockquote-details">
                     <div class="info ps-0">
-                      <h5 class="mb-1">Coriss Ambady</h5>
-                      <p class="mb-0">Financial Analyst</p>
+                      <h5 class="mb-1">{{ ht.0.Name }}</h5>
+                      <p class="mb-0">{{ ht.0.Designation }}</p>
                     </div>
                   </div>
                 </blockquote>
@@ -598,38 +553,17 @@
         <div class="row gx-lg-8 gx-xl-12 gy-10 gy-lg-0">
           <div class="col-lg-4 mt-lg-2">
             <h2 class="fs-15 text-uppercase text-muted mb-3">Our Investors</h2>
-            <h3 class="display-4 mb-3 pe-xxl-5">Trusted by over 20+ Investors</h3>
+            <h3 class="display-4 mb-3 pe-xxl-5">{{ investors.0.Title }}</h3>
             <!-- <p class="lead fs-lg mb-0 pe-xxl-5">We bring solutions to make life easier for our customers.</p> -->
           </div>
           <!-- /column -->
           <div class="col-lg-8">
             <div class="row row-cols-2 row-cols-md-4 gx-0 gx-md-8 gx-xl-12 gy-12">
-              <div class="col">
-                <figure class="px-3 px-md-0 px-xxl-2"><img src="https://www.ciic.ventures/wp-content/uploads/2021/04/ivca.png" alt="" /></figure>
-              </div>
-              <!--/column -->
-              <div class="col">
-                <figure class="px-3 px-md-0 px-xxl-2"><img src="https://www.ciic.ventures/wp-content/uploads/2021/04/mountjudi.png" alt="" /></figure>
-              </div>
-              <!--/column -->
-              <div class="col">
-                <figure class="px-3 px-md-0 px-xxl-2"><img src="https://bluehillpublications.in/wp-content/uploads/2020/11/BLUE-HILL-LOGO-300x200.png" alt="" /></figure>
-              </div>
-              <!--/column -->
-              <div class="col">
-                <figure class="px-3 px-md-0 px-xxl-2"><img src="https://media-thumbs.golden.com/uqa5za2aGILJJOAtxwyejSARZZE=/200x200/smart/golden-storage-production.s3.amazonaws.com%2Ftopic_images%2F918604dc6ddc4088818e1472aa076e7c.png" alt="" /></figure>
-              </div>
-              <!--/column -->
-              <div class="col">
-                <figure class="px-3 px-md-0 px-xxl-2"><img src="https://images.squarespace-cdn.com/content/v1/535167e7e4b0a1a3d8a5b2c2/1554928981686-FWX6PAVKX5D5Y9QFAR9P/Upaya-Logo-Transparent-FINAL.png?format=1000w" alt="" /></figure>
-              </div>
-              <!--/column -->
-              <div class="col">
-                <figure class="px-3 px-md-0 px-xxl-2"><img src="https://knorish-cdn.azureedge.net/public/98c7642b-d862-4e0d-a481-53095718bff4/websitelogo/16042021/shl53.png" alt="" /></figure>
-              </div>
-              <!--/column -->
-             
-              <!--/column -->
+              {% for j in investors %}
+                <div class="col">
+                  <figure class="px-3 px-md-0 px-xxl-2"><img src="{{ j.image.url }}" alt="" /></figure>
+                </div>
+              {% endfor %}
             </div>
             <!--/.row -->
           </div>
@@ -647,7 +581,7 @@
         <div class="row gx-lg-8 mb-10 gy-5">
           <div class="col-lg-6">
             <h3 class="display-5 mb-0">
-              We are trusted by over 20+ Government ventures. 
+              {{ govt.0.Title }}
             </h3>
           </div>
          
@@ -656,89 +590,36 @@
         <div
           class="row row-cols-2 row-cols-md-3 row-cols-xl-5 gx-lg-6 gy-6 justify-content-center"
         >
+        {% for i in govt %}
           <div class="col">
             <div class="card shadow-lg h-100 align-items-center">
               <div
                 class="card-body align-items-center d-flex px-3 py-6 p-md-8"
               >
                 <figure class="px-md-3 px-xl-0 px-xxl-3 mb-0">
-                  <img src="https://www.ciic.ventures/wp-content/uploads/2022/01/bionest.jpg" alt="" />
+                  <img src="{{ i.image.url }}" alt="" />
                 </figure>
               </div>
               <!--/.card-body -->
             </div>
             <!--/.card -->
-          </div>
-          <!--/column -->
-          <div class="col">
-            <div class="card shadow-lg h-100 align-items-center">
-              <div
-                class="card-body align-items-center d-flex px-3 py-6 p-md-8"
-              >
-                <figure class="px-md-3 px-xl-0 px-xxl-3 mb-0">
-                  <img src="https://pbs.twimg.com/profile_images/1598556886428659712/8ZwHoiBC_400x400.jpg" alt="" />
-                </figure>
-              </div>
-              <!--/.card-body -->
-            </div>
-            <!--/.card -->
-          </div>
-          <!--/column -->
-          <div class="col">
-            <div class="card shadow-lg h-100 align-items-center">
-              <div
-                class="card-body align-items-center d-flex px-3 py-6 p-md-8"
-              >
-                <figure class="px-md-3 px-xl-0 px-xxl-3 mb-0">
-                  <img src="https://www.ciic.ventures/wp-content/uploads/2021/04/govt9.png" alt="" />
-                </figure>
-              </div>
-              <!--/.card-body -->
-            </div>
-            <!--/.card -->
-          </div>
-          <!--/column -->
-         
-          <!--/column -->
-          <div class="col">
-            <div class="card shadow-lg h-100 align-items-center">
-              <div
-                class="card-body align-items-center d-flex px-3 py-6 p-md-8"
-              >
-                <figure class="px-md-3 px-xl-0 px-xxl-3 mb-0">
-                  <img src="https://www.ciic.ventures/wp-content/uploads/2021/04/govt2.png" alt="" />
-                </figure>
-              </div>
-              <!--/.card-body -->
-            </div>
-            <!--/.card -->
-          </div>
-          <!--/column -->
         </div>
-        <!--/.row -->
-      </div>
-      <!-- /.container -->
-      
-      <!-- /.container -->
+        {% endfor %}
     </section>
 
     <section class="wrapper bg-light wrapper-border">
       <div class="container py-5 py-md-6">
-        <h2 class=" display-4 text-uppercase text text-center mb-8">International Partners</h2>
+        <h2 class=" display-4 text-uppercase text text-center mb-8">{{ ip.0.Title }}</h2>
         <div class="swiper-container clients mb-0" data-margin="30" data-dots="false" data-autoplay-timeout="3000"
           data-items-xxl="7" data-items-xl="6" data-items-lg="5" data-items-md="4" data-items-xs="2">
           <div class="swiper">
             <div class="swiper-wrapper " style="display: flex; justify-content: center; align-items: center;">
-              <div class="swiper-slide px-5"><img
-                  src="https://www.ciic.ventures/wp-content/uploads/2021/04/worldstartup.png" alt="" /></div>
 
+              {% for i in ip %}
               <div class="swiper-slide px-5"><img
-                  src="https://cdn.sanity.io/images/4b8cd7ug/20210602-140718/60e01a898f37dc86bed4ed9bee8070eaba0f1f3a-800x450.png"
+                  src="{{ i.image.url }}"
                   alt="" /></div>
-              <div class="swiper-slide px-5"><img src="https://www.ciic.ventures/wp-content/uploads/2021/04/ubi.png"
-                  alt="" /></div>
-              <div class="swiper-slide px-5"><img src="https://www.ciic.ventures/wp-content/uploads/2021/11/logo.png"
-                  alt="" /></div>
+                {% endfor %}
 
             </div>
             <!--/.swiper-wrapper -->
@@ -760,14 +641,14 @@
           <!--/column -->
           <div class="col-lg-6">
             <img src="{% static 'assets/img/icons/lineal/telemarketer.svg'  %}" class="svg-inject icon-svg icon-svg-md mb-4" alt="" />
-            <h2 class="display-4 mb-8">Convinced yet? Let's make something great together.</h2>
+            <h2 class="display-4 mb-8">{{ cs.0.Title }}</h2>
             <div class="d-flex flex-row">
               <div>
                 <div class="icon text-primary fs-28 me-6 mt-n1"> <iconify-icon icon="uil:location-pin-alt"></iconify-icon> </div>
               </div>
               <div>
                 <h5 class="mb-1">Address</h5>
-                <address>No.6, ABC Road <br class="d-none d-md-block" />Chennai, India </address>
+                <address>{{ cs.0.Address }}</address>
               </div>
             </div>
             <div class="d-flex flex-row">
@@ -776,7 +657,7 @@
               </div>
               <div>
                 <h5 class="mb-1">Phone</h5>
-                <p>+91 95986 76453</p>
+                <p>{{ cs.0.Phone_number }}</p>
               </div>
             </div>
             <div class="d-flex flex-row">
@@ -785,7 +666,7 @@
               </div>
               <div>
                 <h5 class="mb-1">E-mail</h5>
-                <p class="mb-0"><a href="../cdn-cgi/l/email-protection.html#fb889a959f999483bb9e969a9297d5989496" class="link-body"><span class="__cf_email__" data-cfemail="d1a2b0bfb5b3bea991b4bcb0b8bdffb2bebc">[email&#160;protected]</span></a></p>
+                <p class="mb-0">{{ cs.0.E_Mail }}</p>
               </div>
             </div>
           </div>
