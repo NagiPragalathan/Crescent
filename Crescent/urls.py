@@ -108,15 +108,14 @@ path ("birac",views.birac),
 path("career",views.career),
 path("gallery",views.gallery),
 path("demo",views.demo),
-
 path("about",views.about),
 path("startupTN",views.startupTN),
 path("events",views.eventsTBI),
-
 path("home_edit",views.home_edit),
 path("ourstartup_edit",views.ourstartup),
-path("mba_edit",views.MBA_edit)
-
+path("mba_edit",views.MBA_edit),
+path("about_edit",views.about_edit),
+ 
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

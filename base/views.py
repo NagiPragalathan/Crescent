@@ -568,3 +568,6 @@ def ourstartup (request):
 
 def MBA_edit (request):
     return render(request,"pages/MBA.html")
+
+def about_edit (request):
+    return render(request,"pages/about.html")
