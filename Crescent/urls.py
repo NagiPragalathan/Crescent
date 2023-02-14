@@ -108,27 +108,20 @@ urlpatterns = [
     path("new_ventures_edit",views.new_ventures_edit),
     path("new_ventures_save",views.new_ventures_save),
 
+    path("new_ventures",views.newVentures),
     path("ourstartups",views.ourStartups),
     path("samridth",views.samridth),
     path("service",views.service),
     path("sisfs",views.sisfs),
     path("stategovtfunds",views.stategovtfunds),
     path("testimonial",views.testimonial),
-     
     path("MBA",views.Mba),
+    path ("birac",views.birac),
     path("career",views.career),
     path("gallery",views.gallery),
 
-    path("home_edit",views.home_edit),
-    path("whoweare_save",views.Whoweare),
-    path("Home_TESTIMONIAL",views.Home_TESTIMONIAL),
-    path("Contact_Section",views.Contact_Section),
-    path("investors",views.investors),
-    path("International_Partners",views.International),
-    path("Govt_Tie",views.GovtTie),
-    path("upload_images",views.Upload_Image),
 
-
+    path("about",views.about),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
