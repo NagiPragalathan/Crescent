@@ -305,3 +305,15 @@ class UploadImage(models.Model):
     
     def __str__(self):
         return self.Title
+
+class OurStartup(models.Model):
+    id              = models.IntegerField(primary_key=True)
+    Title   = models.CharField(max_length = 2000)
+    program   = models.CharField(max_length = 2000)
+    image           = models.ImageField(upload_to='Investors/%Y/%m/%d',default='carrer/Screenshot_3.png')
+    date    = models.DateField(default=timezone.now())
+    categories = models.CharField(max_length = 2000)
+    updated_date    = models.DateField(default=timezone.now())
+    
+    def __str__(self):
+        return self.Title

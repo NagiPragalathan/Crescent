@@ -353,7 +353,7 @@
                           <label for="exampleInputPassword1">image</label>
                           <input type="file" id="fileInput-single" class="form-control drop-zoon__file-input" accept="image/*" name="image_file" >
                         </div>
-                        <button id="btn" onclick="img_upload('upload_logo','#fileInput-single',['#reson'])" class="btn btn-primary mr-2">Submit</button>
+                        <button id="btn" onclick="img_upload('ourstartup','#fileInput-single',['#Sub_heading','#Name','#Content','#Categories_for_startup'])" class="btn btn-primary mr-2">Submit</button>
                         <button class="btn btn-light">Cancel</button>
                       </form>
                     </div>
@@ -375,84 +375,31 @@
     <!-- page-body-wrapper ends -->
   </div>
   <script>
-        // function upload() {
-        //         var data = new FormData();
-        //         data.append("image_file", $("#fileInput-single")[0].files[0])
-        //         data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val())
-        //         data.append("Category",$("#Category").val())
-        //         data.append("position",$("#position").val())
-        //         data.append("name",$("#name").val())
-        //         $.ajax({
-        //             method: "POST",
-        //             url: "update_team",
-        //             processData: false,
-        //             contentType: false,
-        //             mimeType: "multipart/form-data",
-        //             data: data,
-        //             success: function(data) {
-        //                 if (data.status == "Upload Done") {
-        //                     console.log("Uploading Done successfully")
-        //                 }
-        //                 else{
-        //                     console.log('error')
-        //                 }
-        //             }
-        //         })
-      //  }
-        // function del(id) {
-        //         $.ajax({
-        //             method: "POST",
-        //             url: 'delete_team',
-        //             data: {
-        //                 'id': id,
-        //                 'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
-        //             }, success: function (data) {
-        //                 location.reload();
-        //             }
-        //         });
-        // }
-        // function val_upload(url,data) {
-        //         var data = new FormData();
-        //         data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
-        //         data.forEach((item)=>{
-        //           data.append(item,$(item).val())
-        //         });
-        //         $.ajax({
-        //             method: "POST",
-        //             url: 'delete_team',
-        //             data: data,
-        //             success: function (data) {
-        //                 location.reload();
-        //             }
-        //         });
-        // }
-        // function img_upload(url,img,data) {
-        //         var data = new FormData();
-        //         data.append(img, $(img)[0].files[0]);
-        //         data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
-        //         data.forEach((item)=>{
-        //           data.append(item,$(item).val())
-        //         });
-        //         data.append("Category",$("#Category").val())
-        //         data.append("position",$("#position").val())
-        //         data.append("name",$("#name").val())
-        //         $.ajax({
-        //             method: "POST",
-        //             url: url,
-        //             processData: false,
-        //             contentType: false,
-        //             mimeType: "multipart/form-data",
-        //             data: data,
-        //             success: function(data) {
-        //                 if (data.status == "Upload Done") {
-        //                     console.log("Uploading Done successfully")
-        //                 }
-        //                 else{
-        //                     console.log('error')
-        //                 }
-        //             }
-        //         })
-        // }
+       function img_upload(url,img,datas) {
+                console.log(datas,img)
+                var data = new FormData();
+                data.append(img, $(img)[0].files[0]);
+                data.append("csrfmiddlewaretoken", $("input[name=csrfmiddlewaretoken]").val());
+                for(let i=0;i<datas.length;i++){
+                  data.append(datas[i],$(datas[i]).val())
+                }
+                $.ajax({
+                    method: "POST",
+                    url: url,
+                    processData: false,
+                    contentType: false,
+                    mimeType: "multipart/form-data",
+                    data: data,
+                    success: function(data) {
+                        if (data.status == "Upload Done") {
+                            console.log("Uploading Done successfully")
+                        }
+                        else{
+                            console.log('error')
+                        }
+                    }
+                })
+              }
 
   </script>
   <!-- container-scroller -->

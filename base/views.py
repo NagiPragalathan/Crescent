@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Gallery,Team,logo,Carrer,blog,Testimonials,Events,Birac,Tbi,Investors,Govt_Tie,UploadImage,International_Partners,Sisfs,WhoAreWe,Contact_SECTION,HOME_TESTIMONIAL,EventsForm,MentorConnectDB,MentorClinicDB, angelInvestorDB, new_venturesDB
+from .models import Gallery,Team,logo,Carrer,blog,Testimonials,Events,Birac,Tbi,Investors,Govt_Tie,OurStartup,UploadImage,International_Partners,Sisfs,WhoAreWe,Contact_SECTION,HOME_TESTIMONIAL,EventsForm,MentorConnectDB,MentorClinicDB, angelInvestorDB, new_venturesDB
 from .Tools import get_images,get_team,reguler_datas,get_blog
 import datetime
 import json
@@ -772,4 +772,7 @@ def Upload_Image(request):
         print(i.Title)
 
     return render(request,"gallery.html")
+
+def save_ourstartups (request):
+    return render(request,"ourstartup.html")
 
