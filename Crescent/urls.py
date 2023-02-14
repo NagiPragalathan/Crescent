@@ -129,12 +129,6 @@ urlpatterns = [
     path("upload_images",views.Upload_Image),
 
 
-
-
-
-
-
-
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
